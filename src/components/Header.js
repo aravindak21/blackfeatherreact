@@ -37,4 +37,19 @@ const ContactButton = styled.button`
 
   &:hover {
     background: #70e000;
-    co
+    color: #000000;
+    box-shadow: 0 0 8px #70e000; /* Add glow effect */
+  }
+`;
+
+const Header = () => {
+  return (
+    <HeaderContainer>
+      <MenuIcon>☰</MenuIcon>
+      <Title>Black Feather Services</Title>
+      <ContactButton>Contact Us</ContactButton>
+    </HeaderContainer>
+  );
+};
+
+export default Header;
