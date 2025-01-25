@@ -48,9 +48,4 @@ const Footer = () => {
         <a href="/team">Team</a>
         <a href="/contact">Contact</a>
       </FooterLinks>
-      <Copyright>© Black Feather Services</Copyright>
-    </FooterContainer>
-  );
-};
-
-export default Footer;
+      <Copyright>© Bla
