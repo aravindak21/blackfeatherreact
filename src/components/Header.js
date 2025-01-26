@@ -7,9 +7,13 @@ const HeaderContainer = styled.div`
   align-items: center;
   padding: 20px;
   background-color: #000000;
-  position: relative;
-  z-index: 10;
+  position: fixed; /* Fixed position at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 10; /* Ensure it appears above other elements */
 `;
+
 
 const FIcon = styled.div`
   display: flex;
@@ -153,11 +157,11 @@ const Header = () => {
       {/* Dropdown Menu */}
       <DropdownMenu isOpen={isMenuOpen}>
         <ul>
-          <li>About</li>
-          <li>Services</li>
-          <li>Gallery</li>
-          <li>Team</li>
-          <li>Cost</li>
+          <li onClick={() => (window.location.href = "/about")}>About</li>
+          <li onClick={() => (window.location.href = "/services")}>Services</li>
+          <li onClick={() => (window.location.href = "/gallery")}>Gallery</li>
+          <li onClick={() => (window.location.href = "/team")}>Team</li>
+          <li onClick={() => (window.location.href = "/cost-estimation")}>Cost</li> {/* New Cost menu item */}
         </ul>
       </DropdownMenu>
     </HeaderContainer>
