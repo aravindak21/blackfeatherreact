@@ -67,29 +67,29 @@ const Footer = styled.footer`
 `;
 
 const CostEstimation1 = () => {
-  const navigateToCalculator = () => {
-    window.location.href = "/cost-estimation-calculator"; // Adjust route as needed
+    const navigateToCalculator = () => {
+      window.location.href = "/cost-estimation-calculator"; // Navigate to CostEstimation2
+    };
+  
+    return (
+      <PageContainer>
+        <Header />
+        <Title>Shine Brighter with a Sparkling Clean! Estimate Your Cost Now.</Title>
+        <GetStartedButton onClick={navigateToCalculator}>Get started</GetStartedButton>
+        <Footer>
+          <nav>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/careers">Careers</a>
+            <a href="/testimonials">Testimonials</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/team">Team</a>
+            <a href="/contact">Contact</a>
+          </nav>
+          <p>© Black Feather Services</p>
+        </Footer>
+      </PageContainer>
+    );
   };
-
-  return (
-    <PageContainer>
-      <Header /> {/* Add the same header as in the home page */}
-      <Title>Shine Brighter with a Sparkling Clean! Estimate Your Cost Now.</Title>
-      <GetStartedButton onClick={navigateToCalculator}>Get started</GetStartedButton>
-      <Footer>
-        <nav>
-          <a href="/about">About</a>
-          <a href="/services">Services</a>
-          <a href="/careers">Careers</a>
-          <a href="/testimonials">Testimonials</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/team">Team</a>
-          <a href="/contact">Contact</a>
-        </nav>
-        <p>© Black Feather Services</p>
-      </Footer>
-    </PageContainer>
-  );
-};
-
-export default CostEstimation1;
+  
+  export default CostEstimation1;
