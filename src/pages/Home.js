@@ -35,4 +35,46 @@ const ImageButton = styled.button`
   background-position: center;
   border: none;
   cursor: pointer;
- 
+  border-radius: 8px; /* Slightly rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Alata Regular", sans-serif;
+  font-size: 32px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  overflow: hidden; /* Ensure no content overflows */
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
+
+  &:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional darken on hover */
+    color: #70e000;
+  }
+`;
+
+const Divider = styled.div`
+  height: 1.5px; /* Thinner line */
+  width: 200px; /* Wider line */
+  background-color: #70e000;
+  margin: 40px auto; /* Equal space between buttons and footer */
+  box-shadow: 0 0 6px #70e000; /* Reduced glow effect */
+`;
+
+const Home = () => {
+  return (
+    <MainContainer>
+      <Header />
+      <Content>
+        <ButtonsContainer>
+          <ImageButton bgImage={ResidentialImage}>Residential</ImageButton>
+          <ImageButton bgImage={OfficeImage}>Office</ImageButton>
+        </ButtonsContainer>
+        <Divider />
+      </Content>
+      <Footer />
+    </MainContainer>
+  );
+};
+
+export default Home;

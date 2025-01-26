@@ -63,14 +63,15 @@ const FHorizontalBar = styled.div`
 
 const DropdownMenu = styled.div`
   position: absolute;
-  top: 50px; /* Space below the F icon */
+  top: 60px; /* Space below the F icon */
   left: 0; /* Align dropdown menu below the F icon */
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  background: rgba(20, 20, 20, 0.8); /* Slightly lighter semi-transparent black */
   backdrop-filter: blur(8px); /* Frosted glass effect */
   -webkit-backdrop-filter: blur(8px); /* Frosted glass for Safari */
   color: #ffffff;
-  width: 160px; /* Reduced width for a sleeker look */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 120px; /* Reduced width for a compact look */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for differentiation */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow for separation */
   padding: 10px 15px;
   border-radius: 8px;
   display: ${(props) => (props.isOpen ? "block" : "none")};
@@ -97,7 +98,7 @@ const DropdownMenu = styled.div`
     margin: 10px 0;
     font-size: 16px;
     cursor: pointer;
-    text-align: left; /* Align text to the left for a clean look */
+    text-align: left;
 
     &:hover {
       color: #70e000; /* Highlight menu items on hover */
