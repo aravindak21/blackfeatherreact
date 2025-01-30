@@ -161,7 +161,6 @@ const Header = () => {
           <li onClick={() => (window.location.href = "/services")}>Services</li>
           <li onClick={() => (window.location.href = "/gallery")}>Gallery</li>
           <li onClick={() => (window.location.href = "/team")}>Team</li>
-          <li onClick={() => (window.location.href = "/cost-estimation")}>Cost</li> {/* New Cost menu item */}
         </ul>
       </DropdownMenu>
     </HeaderContainer>
