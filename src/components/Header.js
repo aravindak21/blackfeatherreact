@@ -1,3 +1,4 @@
+// src/components/Header.js
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 
@@ -13,7 +14,6 @@ const HeaderContainer = styled.div`
   width: 100%; /* Full width */
   z-index: 10; /* Ensure it appears above other elements */
 `;
-
 
 const FIcon = styled.div`
   display: flex;
@@ -144,7 +144,6 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      {/* Custom "F" Icon with onClick handler */}
       <FIcon isOpen={isMenuOpen} onClick={toggleMenu}>
         <FVerticalBar isOpen={isMenuOpen} />
         <FHorizontalBar isOpen={isMenuOpen} width="80%" />
@@ -154,13 +153,13 @@ const Header = () => {
       <Title>Black Feather Services</Title>
       <ContactButton>Contact Us</ContactButton>
 
-      {/* Dropdown Menu */}
       <DropdownMenu isOpen={isMenuOpen}>
         <ul>
           <li onClick={() => (window.location.href = "/about")}>About</li>
           <li onClick={() => (window.location.href = "/services")}>Services</li>
           <li onClick={() => (window.location.href = "/gallery")}>Gallery</li>
           <li onClick={() => (window.location.href = "/team")}>Team</li>
+          <li onClick={() => (window.location.href = "/contact")}>Cost</li>
         </ul>
       </DropdownMenu>
     </HeaderContainer>
