@@ -20,11 +20,11 @@ const FIcon = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 28px; /* Increased width to prevent cropping */
+  width: 28px;
   height: 28px;
   cursor: pointer;
   position: relative;
-  transition: all 0.4s ease-in-out; /* Smooth transition */
+  transition: all 0.4s ease-in-out;
 
   &:hover div {
     background-color: #70e000;
@@ -57,14 +57,14 @@ const FHorizontalBar = styled.div`
     props.isOpen &&
     css`
       &:nth-child(2) {
-        transform: rotate(45deg) translate(4px, 6px); /* Adjusted position */
+        transform: rotate(45deg) translate(4px, 6px);
         width: 100%;
       }
       &:nth-child(3) {
         opacity: 0;
       }
       &:nth-child(4) {
-        transform: rotate(-45deg) translate(4px, -6px); /* Adjusted position */
+        transform: rotate(-45deg) translate(4px, -6px);
         width: 100%;
       }
     `}
@@ -157,7 +157,7 @@ const Header = () => {
 
       <DropdownMenu isOpen={isMenuOpen}>
         <ul>
-          <li onClick={() => navigate("/about")}>About</li>
+          <li onClick={() => navigate("/journey")}>About</li> {/* ✅ Redirects to Journey Page */}
           <li onClick={() => navigate("/services")}>Services</li>
           <li onClick={() => navigate("/gallery")}>Gallery</li>
           <li onClick={() => navigate("/team")}>Team</li>
