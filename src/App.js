@@ -12,20 +12,18 @@ import Journey from "./pages/Journey"; // ✅ Import Journey Page
 
 const App = () => {
   return (
-    <>
+    <Router>
       <GlobalStyle />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/journey" element={<Journey />} /> {/* ✅ New Route */}
-        </Routes>
-      </Router>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/journey" element={<Journey />} />
+      </Routes>
+    </Router>
   );
 };
 
